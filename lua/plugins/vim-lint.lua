@@ -9,7 +9,7 @@ return { -- Linting
 			java = { "checkstyle" }, -- Java: Checkstyle
 			c = { "clangtidy", "cppcheck" }, -- C: clang-tidy, cppcheck
 			cpp = { "clangtidy", "cppcheck" }, -- C++: clang-tidy, cppcheck
-			rust = { "clippy" }, -- Rust: Clippy
+			-- rust = { "clippy" }, -- Rust: Clippy
 			sh = { "shellcheck" }, -- Bash/Shell: ShellCheck
 			html = { "htmlhint" }, -- HTML: htmlhint
 			css = { "stylelint" }, -- CSS: stylelint
@@ -25,5 +25,21 @@ return { -- Linting
 				lint.try_lint()
 			end,
 		})
+		-- Setup floating window for diagnostic messages
+		vim.diagnostic.config({
+			virtual_text = false, -- Disable inline text to keep things clean
+			float = {
+				source = true, -- Show source in diagnostics floating window
+				border = "rounded", -- Rounded border for floating window
+			},
+		})
+
+		-- Set keybindings to open the floating window for diagnostics
+		vim.api.nvim_set_keymap(
+			"n",
+			"<leader>e",
+			"<cmd>lua vim.diagnostic.open_float(nil, { focusable = false })<CR>",
+			{ noremap = true, silent = true }
+		)
 	end,
 }

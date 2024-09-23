@@ -110,6 +110,10 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+-- Keybinds to make scrolling easier.
+--vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "scroll up and center screen" })
+--vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "scroll down and center screen" })
+
 -- Template Commands.
 -- This set of commands just sets up little code snippets for me to
 -- start files with so I don't have to type the same template code
