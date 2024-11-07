@@ -27,14 +27,11 @@ To set up this configuration on a new machine, follow these steps:
 
 2. **Clone your configuration repo**:
    ```bash
-   git clone <your-repo-url> ~/.config/nvim
+   git clone git@github.com:boredsherbet/nvim-config.git ~/.config/nvim
    ```
 
 3. **Install LazyVim**:
-   Open Neovim, and LazyVim will automatically handle installing and configuring all necessary plugins:
-   ```vim
-   nvim
-   ```
+   Open Neovim, and LazyVim will automatically handle installing and configuring all necessary plugins!
 
 4. **Enjoy your setup!**
 
